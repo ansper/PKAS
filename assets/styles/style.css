@@ -1,0 +1,113 @@
+@font-face {
+	font-family: Days One;
+	src: url(fonts/heavydays.ttf);
+}
+
+html {
+	font-family: 'Days One', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	height: 100%;
+    line-height: 1;
+}
+a {
+	cursor: pointer;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+._container {
+    max-width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: content-box;
+}
+/*
+HEADER
+*/
+header {
+	background: url('../img/header/other_header.jpg');
+}
+.other__header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__containerimg {
+	width: 100px;
+	height: 100px;
+}
+.header__top ul {
+	display: flex;
+}
+.header__top li {
+	margin: 11px;
+}
+.header__top li a {
+	color: #000;
+	font-size: 20px;
+}
+/*
+FOOTER
+*/
+footer {
+	background: #222222;
+	color: #fff;
+	font-size: 20px;
+	line-height: 25px;
+	padding: 45px 0 20px;
+}
+footer h3 {
+	color: #F18104;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 5px 0;
+}
+.line {
+	width: 30px;
+	height: 1px;
+	background: #F18104;
+}
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__contant {
+	display: flex;
+	flex-direction: column;
+}
+.footer__src__container {
+	display: flex;
+	justify-content: space-between;
+}
+.footer__row {
+	display: flex;
+	flex-direction: column;
+}
+.footer__row a {
+	color: #fff;
+	margin-top: 12px;
+}
+.footer__contacts {
+	display: flex;
+	flex-direction: column;
+	margin-top: 33px;
+}
+.footer__contacts span {
+	margin-top: 12px;
+}
+.copyright__container {
+	margin-top: 40px;
+	color: #40403D;
+	font-size: 16px;
+	line-height: 20px;
+	border-top: 1px solid #40403D;
+	display: flex;
+	justify-content: space-between;
+}
+.copyright__img {
+	margin-top: 7px;
+}

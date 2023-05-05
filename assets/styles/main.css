@@ -1,0 +1,123 @@
+/*
+***********ШАПКА***********
+*/
+header {
+	background: url('../img/header/bg_header.jpg') no-repeat;
+	width: 100%;
+	height: 770px;
+}
+.header__top ul {
+	display: flex;
+	justify-content: end;
+	margin: 0 70px 0 0;
+}
+.header__bottom {
+	display: flex;
+	justify-content: space-around;
+	font-size: 50px;
+	margin-top: 100px;
+}
+.header__bottom h1 {
+	text-align: center;
+	max-width: 755px;
+	line-height: 64px;
+}
+/*
+***********ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ***********
+*/
+.video {
+	margin: 80px 0 170px;
+}
+.bg__opendoors {
+	margin: 0;
+	position: relative;
+	z-index: -1;
+}
+.bg__opendoors img {
+	position: absolute;
+	width: 100%;
+}
+.video__container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+}
+.video__container h2 {
+	font-size: 40px;
+	color: #F18104;
+}
+.video__container iframe {
+	margin-top: 100px;
+}
+.video__container a {
+	margin-top: 30px;
+	padding: 5px 10px;
+	border: 2px solid #F18104;
+	color: #1C1C1B;
+	line-height: 17.82px;
+	font-size: 14px;
+	font-weight: 600;
+}
+/*
+***********НОВОСТИ***********
+*/
+.news__container {
+	display: flex;
+	justify-content: center;
+	align-items: center	;
+}
+.last__news {
+	display: flex;
+	flex-direction: column;
+	margin-right: 170px;
+}
+.last__news h2 {
+	font-size: 40px;
+	color: #F18104;
+	margin-bottom: 10px;
+}
+.last__news h3 {
+	margin: 10px 0;
+	font-size: 30px;
+	color: #1C1C1B;
+	max-width: 550px;
+	line-height: 38px;
+	font-weight: 600;
+}
+.last__news span {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	color: #636161;
+}
+.other__news {
+	display: flex;
+	flex-direction: column;
+}
+.other__news a {
+	padding: 5px;
+	border: 2px solid #F18104;
+	max-width: 112px;
+	text-align: center;
+	color: #1C1C1B;
+	line-height: 17.82px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.other__news__block:not(:last-child) {
+	margin-bottom: 30px;
+}
+.other__news__block h3 {
+	color: #1C1C1B;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: 600;
+}
+.other__news__block span {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #636161;
+}
