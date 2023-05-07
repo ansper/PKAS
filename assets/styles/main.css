@@ -22,6 +22,10 @@ header {
 	max-width: 755px;
 	line-height: 64px;
 }
+.drop-item:hover .dropdown {
+	display: block;
+	top: 35px;
+}
 /*
 ***********ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ***********
 */

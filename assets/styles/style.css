@@ -44,11 +44,29 @@ header {
 	display: flex;
 }
 .header__top li {
-	margin: 11px;
+	margin: 5px;
+	padding: 5px;
 }
 .header__top li a {
 	color: #000;
 	font-size: 20px;
+}
+.dropdown {
+	margin-top: 10px;
+	display: none;
+	position: absolute;
+	top: -9999px;
+	background: #fff;
+	border: 1px solid #F18104;
+}
+.dropdown a {
+	font-size: 20px;
+	line-height: 25px;
+	color: #1C1C1B;
+}
+.drop-item:hover .dropdown {
+	display: block;
+	top: 55px;
 }
 /*
 FOOTER
