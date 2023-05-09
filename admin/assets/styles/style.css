@@ -1,0 +1,96 @@
+.foto {
+	text-align: center;
+	margin: 0 auto 100px;
+}
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.nav a {
+	width: 360px;
+	padding: 17px 0;
+	text-align: center;
+	border: 1px solid #F18104;
+	font-size: 24px;
+	color: #000;
+}
+.nav a:active {
+	background: #F18104;
+}
+.nav a:not(:last-child) {
+	margin-bottom: 70px;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+table {
+	background: #f3f4f6;
+	border-collapse: separate;
+	box-shadow: inset 0 1px 0 #fff;
+	font-size: 15px;
+	line-height: 24px;
+	margin: 30px auto 0 0;
+	text-align: left;
+	width: 100%;
+	height: 50px;
+	font-family: Montserrat;
+}
+  
+td {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #e8e8e8;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #b3b3b3;
+	padding: 10px 15px;
+	position: relative;
+	transition: all 300ms;
+}
+  
+th {
+	text-align: left;
+	font-weight: bold;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.delete {
+	display: flex;
+	align-items: center;
+}
+  
+.btn {
+	align-self: center;
+	width: 100px;
+	background: #000;
+	color: #fff;
+	border: none;
+	padding: 5px 0;
+	cursor: pointer;
+}
+
+.conf {
+	display: flex;
+}
+
+.add {
+	background: none;
+	border: 1px solid black;
+	height: 30px;
+}
+
+.width-50 {
+	max-width: 50px;
+}
+
+.width-100 {
+	max-width: 75px;
+}
+
+.width-150 {
+	max-width: 125px;
+}
