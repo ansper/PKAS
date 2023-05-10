@@ -1,37 +1,29 @@
 <?php
 
-    $page = $_GET['pages'];
+$request = $_SERVER['REQUEST_URI'];
 
-    switch ($page) {
-        case 'info':
-            header('Location: pages/information/info.html');
-            break;
-        
-        // fill
-        case 'administration':
-            header('Location: pages/information/');
-            break;
+switch ($request) {
 
-        case 'document':
-            header('Location: pages/information/');
-            break;
+    case '':
+    case '/':
+        require __DIR__ . '/pages/main.php';
+        break;
+    
+    case '/news':
+        require __DIR__ . '/pages/news.php';
+        break;
 
-        case 'education':
-            header('Location: pages/information/');
-            break;
+    case '/info':
+        require __DIR__ . '/pages/information/info.html';
+        break;
 
-        case 'management':
-            header('Location: pages/information/');
-            break;
-        // fill
+    case '/admin':
+        require __DIR__ . '/admin/admin.php';
+        break;
 
-        case 'news':
-            header('Location: pages/news.php');
-            break;
-
-        default:
-            header('Location: pages/main.php');
-            break;
-    }
+    default:
+        require __DIR__ . '/pages/404.html';
+        break;
+}
 
 ?>

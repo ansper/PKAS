@@ -1,3 +1,6 @@
+<?php
+include('./assets/php/connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +23,19 @@
 								<a href="#">Сведения</a>
 								<ul class="dropdown">
 									<li>
-										<a href="../index.php?pages=info">Основные сведения</a>
+										<a href="/info">Основные сведения</a>
 									</li>
 									<li>
-										<a href="../index.php?pages=administration">Структура и органы управления организации</a>
+										<a href="/administration">Структура и органы управления организации</a>
 									</li>
 									<li>
-										<a href="../index.php?pages=document">Документы</a>
+										<a href="">Документы</a>
 									</li>
 									<li>
-										<a href="../index.php?pages=education">Образование</a>
+										<a href="">Образование</a>
 									</li>
 									<li>
-										<a href="../index.php?pages=management">Руководство</a>
+										<a href="">Руководство</a>
 									</li>
 									<li>
 										<a href="">Педагогический состав</a>
@@ -225,16 +228,28 @@
 				<div class="news__container _container">
 					<div class="last__news">
 						<h2>Недавнее из колледжа</h2>
-						<img src="../assets/img/news/test.jpg" alt="news">
-						<h3>3 группы отправились в экскурсию на Маяк Таркова</h3>
-						<span>Май 3, 2023</span>
+						<?php
+							$max = "MAX(id)";
+							$last = $conn -> query("select $max from news") -> fetch_assoc();
+							$lastResult = $conn -> query("select * from news where id = $last[$max]");
+							$lastRow = $lastResult -> fetch_assoc();
+						?>
+						<img src="../assets/img/news/<?php echo $lastRow['img'] ?>" alt="news">
+						<h3><?php echo $lastRow['title'] ?></h3>
+						<span><?php echo $lastRow['date'] ?></span>
 					</div>
 					<div class="other__news">
+						<?php
+							// last 4 news
+						?>
 						<div class="other__news__block">
 							<h3>Родительское собрание в колледже</h3>
 							<span>Май 1, 2023</span>
 						</div>
-						<a href="../index.php?pages=news">все новости</a>
+						<?php
+							// last 4 news
+						?>
+						<a href="/news">все новости</a>
 					</div>
 				</div>
 			</section>

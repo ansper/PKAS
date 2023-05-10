@@ -14,7 +14,7 @@
         <!-- ШАПКА -->
         <header>
             <div class="other__header__container _container">
-                <a href=""><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
+                <a href="/"><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
                 <div class="header__top">
                     <nav>
 						<ul>
@@ -22,7 +22,7 @@
 								<a href="">Сведения</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Основные сведения</a>
+										<a href="/info">Основные сведения</a>
 									</li>
 									<li>
 										<a href="">Структура и органы управления организации</a>
