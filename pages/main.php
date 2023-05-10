@@ -17,22 +17,22 @@
 					<nav>
 						<ul>
 							<li class="drop-item">
-								<a href="">Сведения</a>
+								<a href="#">Сведения</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Основные сведения</a>
+										<a href="../index.php?pages=info">Основные сведения</a>
 									</li>
 									<li>
-										<a href="">Структура и органы управления организации</a>
+										<a href="../index.php?pages=administration">Структура и органы управления организации</a>
 									</li>
 									<li>
-										<a href="">Документы </a>
+										<a href="../index.php?pages=document">Документы</a>
 									</li>
 									<li>
-										<a href="">Образование</a>
+										<a href="../index.php?pages=education">Образование</a>
 									</li>
 									<li>
-										<a href="">Руководство</a>
+										<a href="../index.php?pages=management">Руководство</a>
 									</li>
 									<li>
 										<a href="">Педагогический состав</a>
@@ -234,7 +234,7 @@
 							<h3>Родительское собрание в колледже</h3>
 							<span>Май 1, 2023</span>
 						</div>
-						<a href="">все новости</a>
+						<a href="../index.php?pages=news">все новости</a>
 					</div>
 				</div>
 			</section>
