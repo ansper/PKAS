@@ -44,7 +44,7 @@ include('./assets/php/connect.php');
 										<a href="">Материально техническое обеспечение</a>
 									</li>
 									<li>
-										<a href="">Стипндии меры подеержки обучающихся</a>
+										<a href="">Стипендии меры поддержки обучающихся</a>
 									</li>
 									<li>
 										<a href="">Платные образовательные услуги</a>
@@ -54,9 +54,6 @@ include('./assets/php/connect.php');
 									</li>
 									<li>
 										<a href="">Доступная среда</a>
-									</li>
-									<li>
-										<a href="">Международное сотрудничество</a>
 									</li>
 								</ul>
 							</li>
@@ -111,7 +108,7 @@ include('./assets/php/connect.php');
 										<a href="">Платные образовательные услуги</a>
 									</li>
 									<li>
-										<a href="">Стипндии меры подеержки обучающихся</a>
+										<a href="">Стипендии и меры поддержки обучающихся</a>
 									</li>
 									<li>
 										<a href="">Вакантные места для приема и перевода обучащихся</a>
@@ -121,9 +118,6 @@ include('./assets/php/connect.php');
 									</li>
 									<li>
 										<a href="">Подать заявление</a>
-									</li>
-									<li>
-										<a href="">Cведения о количестве поданных заявлений</a>
 									</li>
 									<li>
 										<a href="">Обязательный предварительный медицинский осмотр</a>
@@ -143,19 +137,13 @@ include('./assets/php/connect.php');
 									<li>
 										<a href="">Договор об оказании платных образовательных услуг</a>
 									</li>
-									<li>
-										<a href="">Информация для инвалидов и лиц с ОВЗ</a>
-									</li>
-									<li>
-										<a href="">Навигатор профессий</a>
-									</li>
 								</ul>
 							</li>
 							<li class="drop-item">
 								<a href="">Студенту</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Стипндии меры подеержки обучающихся</a>
+										<a href="">Стипендии меры поддержки обучающихся</a>
 									</li>
 									<li>
 										<a href="">Дистанционное обучение</a>
@@ -240,14 +228,19 @@ include('./assets/php/connect.php');
 					</div>
 					<div class="other__news">
 						<?php
-							// last 4 news
+							for($i = $last[$max] - 1; $i > $last[$max] - 4; $i--) {
+								if ($i < 1) {
+									break;
+								}
+								$result = $conn -> query("select * from news where id = $i");
+								$row = $result -> fetch_assoc();
 						?>
 						<div class="other__news__block">
-							<h3>Родительское собрание в колледже</h3>
-							<span>Май 1, 2023</span>
+							<h3><?php echo $row['title'] ?></h3>
+							<span><?php echo $row['date'] ?></span>
 						</div>
 						<?php
-							// last 4 news
+							}
 						?>
 						<a href="/news">все новости</a>
 					</div>

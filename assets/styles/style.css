@@ -47,8 +47,8 @@ header {
 	margin: 5px;
 	padding: 5px;
 }
-.header__top li a {
-	color: #000;
+.drop-item>a {
+	color: #fff;
 	font-size: 20px;
 }
 .dropdown {

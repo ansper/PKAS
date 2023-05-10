@@ -21,6 +21,7 @@ header {
 	text-align: center;
 	max-width: 755px;
 	line-height: 64px;
+	color: #fff;
 }
 .drop-item:hover .dropdown {
 	display: block;
