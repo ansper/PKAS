@@ -1,0 +1,138 @@
+.newspage {
+	display: flex;
+	margin: 122px 0px 160px 334px
+}
+
+.newspage__container {
+	width: 100%;
+	padding-right: var(--bs-gutter-x, 0.75rem);
+	padding-left: var(--bs-gutter-x, 0.75rem);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.newspage__row {
+	display: flex;
+	--bs-gutter-x: 1.5rem;
+	--bs-gutter-y: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(var(--bs-gutter-y) * -1);
+	margin-right: calc(var(--bs-gutter-x) * -.5);
+	margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.newspage__content {}
+
+.newspage__foto {}
+
+.newspage__title {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 41px;
+	color: #1C1C1B;
+	padding-top: 35px;
+}
+
+.newspage__date {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 25px;
+	color: #636161;
+	border-bottom: 2px solid #DDDDDD;
+	width: 700px;
+	padding-bottom: 12px
+}
+
+.text {
+	margin-top: 15px;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 31px;
+	color: #1C1C1B;
+}
+
+.newspage__content2 {
+	margin-left: 60px;
+}
+
+.news {
+	margin-bottom: 18px;
+	cursor: pointer;
+
+}
+
+.news:hover h4 {
+	color: #F18104;
+}
+
+.news:hover p {
+	color: #F18104;
+}
+
+.news-bottom {
+	margin-top: 2px;
+	border-bottom: 1px solid #DDDDDD;
+	width: 30px;
+}
+
+h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 25px;
+	color: #1C1C1B;
+	padding-bottom: 6px;
+}
+
+p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	color: #636161;
+
+}
+
+.bt {
+	border: 3px solid orange;
+	padding: 6px 0px;
+	max-width: 130px;
+}
+
+.tex {
+	display: flex;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	color: #1C1C1B;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.tex:hover {
+	color: #F18104;
+}
+
+.bt:hover {
+	border: 3px solid orange;
+}
+
+vcupsevSimba58 @media (max-width: 1280px) {
+	.newspage__content2 {
+		margin-left: 0px;
+		margin-top: 60px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.newspage__content2 {
+		margin-left: 0px;
+		margin-top: 60px;
+	}
+
+	.newspage {
+		margin-left: 180px;
+	}
+}

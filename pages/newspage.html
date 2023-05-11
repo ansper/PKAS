@@ -1,15 +1,13 @@
-<?php
-include('./assets/php/connect.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../assets/styles/reset.css">
-	<link rel="stylesheet" href="../assets/styles/style.css">
-	<link rel="stylesheet" href="../assets/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
+	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+	<link rel="stylesheet" href="../assets/styles/newspage.css">
+
 
 	<title>ГАПО ПО ПКАС</title>
 </head>
@@ -18,7 +16,8 @@ include('./assets/php/connect.php');
 	<div class="wrapper">
 		<!-- ШАПКА -->
 		<header>
-			<div class="header__container">
+			<div class="other__header__container _container">
+				<a href="main.html"><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
 				<div class="header__top">
 					<nav>
 						<ul>
@@ -194,108 +193,66 @@ include('./assets/php/connect.php');
 						</ul>
 					</nav>
 				</div>
-				<div class="header__bottom">
-					<h1>ПЕНЗЕНСКИЙ КОЛЛЕДЖ АРХИТЕКТУРЫ И СТРОИТЕЛЬСТВА</h1>
-					<img src="../assets/img/header/logo.png" alt="">
-				</div>
 			</div>
 		</header>
 		<!-- ШАПКА -->
 		<main>
-			<!-- ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ -->
-			<section class="video">
-				<div class="bg__opendoors">
-					<img src="../assets/img/opendoor/bg_opendoors.png" alt="">
-				</div>
-				<div class="video__container _container ">
-					<h2>День открытых дверей</h2>
-					<iframe width="937" height="526" src="https://www.youtube.com/embed/ofbJI4SRhME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<a href="">еще видео</a>
-				</div>
-			</section>
-			<!-- ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ -->
-			<!-- НОВОСТИ -->
-			<section class="news">
-				<div class="news__container _container">
-					<div class="last__news">
-						<h2>Недавнее из колледжа</h2>
-						<?php
-						$max = "MAX(id)";
-						$last = $conn->query("select $max from news")->fetch_assoc();
-						$lastResult = $conn->query("select * from news where id = $last[$max]");
-						$lastRow = $lastResult->fetch_assoc();
-						?>
-						<img src="../assets/img/news/<?php echo $lastRow['img'] ?>" alt="news">
-						<h3><?php echo $lastRow['title'] ?></h3>
-						<span><?php echo $lastRow['date'] ?></span>
-					</div>
-					<div class="other__news">
-						<?php
-						for ($i = $last[$max] - 1; $i > $last[$max] - 4; $i--) {
-							if ($i < 1) {
-								break;
-							}
-							$result = $conn->query("select * from news where id = $i");
-							$row = $result->fetch_assoc();
-						?>
-							<div class="other__news__block">
-								<h3><?php echo $row['title'] ?></h3>
-								<span><?php echo $row['date'] ?></span>
+			<div class="newspage">
+				<div class="newspage__container">
+					<div class="newspage__row">
+						<div class="newspage__content">
+							<div class="newspage__foto">
+								<img src="../assets/img/newspage/image 9.png" alt="">
 							</div>
-						<?php
-						}
-						?>
-						<a href="/news">все новости</a>
-					</div>
-				</div>
-			</section>
-			<!-- НОВОСТИ -->
-			<!-- НАШИ ПРЕПОДАВАТЕЛИ -->
-			<div id="slickclider">
-				<div class="slickclider">
-					<div class="slidertitle__row">
-						<div class="sidertitle__body">
-							<div class="slidertitle__title">Наши преподаватели</div>
+							<div class="newspage__title">Приняли участие в акции по<br> благоустройству</div>
+							<div class="newspage__date">Май 3, 2023</div>
+							<div class="text">27 апреля на базе ДЮСШ №4 состоялось<br> награждение победителей и призеров в
+								личном и<br> командном Первенстве XXXIII Кубка Пензенской<br> области по лыжным гонкам.<br>
+								Среди победителей студентка I курса группы<br> 22ОА27 Дарья Белякова, которая награждена<br>
+								дипломом III степени в личном первенстве среди<br> девушек 2005-2006 годов рождения.<br>
+								Все соревнования этапа проходили на стадионе<br> "Снежинка", где Дарья продемонстрировала<br>
+								отличное владение классическим и коньковым<br> ходом. На данный момент она готовится к <br>
+								легкоатлетической эстафете, которая будет<br> проходить 9 Мая.</div>
 						</div>
-					</div>
-
-					<div class="slider">
-						<div class="slider__item">
-							<div class="sliderr__body">
-								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5.png" alt="">
-								<div class="sliderr__title">Сидорин Александр<br> Сергеевич</div>
-								<div class="sliderr__text">Преподаватель физической<br> культуры</div>
+						<div class="newspage__content2">
+							<div class="news">
+								<a href="">
+									<h4>Родительское собрание в колледже</h4>
+									<p>Май 3, 2023</p>
+									<div class="news-bottom"></div>
+								</a>
+							</div>
+							<div class="news">
+								<a href="">
+									<h4>Диктант Победы в колледже</h4>
+									<p>Май 3, 2023</p>
+									<div class="news-bottom"></div>
+								</a>
+							</div>
+							<div class="news">
+								<a href="">
+									<h4>Приняли участие в акции по благоустройству</h4>
+									<p>Май 3, 2023</p>
+									<div class="news-bottom"></div>
+								</a>
+							</div>
+							<div class="news">
+								<a href="">
+									<h4>Посетили завод "Пензтяжпромарматура"</h4>
+									<p>Май 3, 2023</p>
+									<div class="news-bottom"></div>
+								</a>
+							</div>
+							<div class="bt">
+								<a class="tex" href="#">все новости</a>
 							</div>
 						</div>
-
-						<div class="slider__item">
-							<div class="sliderr__body">
-								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (1).png" alt="">
-								<div class="sliderr__title">Первушкин Никита<br> Евгеньевич</div>
-								<div class="sliderr__text">Преподаватель информационных<br> технологий</div>
-							</div>
-						</div>
-
-						<div class="slider__item">
-							<div class="sliderr__body">
-								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (2).png" alt="">
-								<div class="sliderr__title">Бычкова Мария<br> Владимировна</div>
-								<div class="sliderr__text">Преподаватель английского<br> языка</div>
-							</div>
-						</div>
-
-						<div class="slider__item">
-							<div class="sliderr__body">
-								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (1).png" alt="">
-								<div class="sliderr__title">Первушкин Никита<br> Евгеньевич</div>
-								<div class="sliderr__text">Преподаватель информационных<br> технологий</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</div>
-			<!-- НАШИ ПРЕПОДАВАТЕЛИ -->
+
+
+
 		</main>
 		<!-- ПОДВАЛ -->
 		<footer>
@@ -334,7 +291,8 @@ include('./assets/php/connect.php');
 			</div>
 			<div class="copyright _container">
 				<div class="copyright__container">
-					<span>Copyright © 2015-2022 ГАПОУ ПО Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
+					<span>Copyright © 2015-2022 ГАПОУ ПО Пензенский колледж архитектуры и строительства <br> Designed by
+						yfuhzpyjv</span>
 					<div class="copyright__img">
 						<a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
 						<a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
@@ -345,9 +303,7 @@ include('./assets/php/connect.php');
 		<!-- ПОДВАЛ -->
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="../assets/js/script.js"></script>
-   <script src="../assets/js/slick.min.js"></script>
+
 </body>
 
 </html>
