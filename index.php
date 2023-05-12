@@ -21,6 +21,10 @@ switch ($request) {
         require __DIR__ . '/admin/admin.php';
         break;
 
+    case '/apply':
+        require __DIR__ . '/pages/enrollee/apply.html';
+        break;
+
     default:
         require __DIR__ . '/pages/404.html';
         break;

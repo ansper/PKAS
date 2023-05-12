@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
-	<link rel="stylesheet" type="text/css" href="../assets/styles/news.css">
-    <title>Новости</title>
+	<link rel="stylesheet" type="text/css" href="../assets/styles/apply.css">
+    <title>Подать заявление</title>
 </head>
 <body>
     <div class="wrapper">
-        <!-- ШАПКА -->
-        <header>
-            <div class="other__header__container _container">
-                <a href="/"><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
-                <div class="header__top">
-                    <nav>
+		<!-- ШАПКА -->
+		<header>
+			<div class="other__header__container _container">
+				<a href=""><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
+				<div class="header__top">
+					<nav>
 						<ul>
 							<li class="drop-item">
 								<a href="">Сведения</a>
 								<ul class="dropdown">
 									<li>
-										<a href="/info">Основные сведения</a>
+										<a href="">Основные сведения</a>
 									</li>
 									<li>
 										<a href="">Структура и органы управления организации</a>
@@ -189,87 +189,105 @@
 							</li>
 						</ul>
 					</nav>
-                </div>
-            </div>
-        </header>
+			    </div>
+			</div>
+		</header>
         <main>
-            <div class="news">
-                <h2>Новости</h2>
-                <div class="news__container _container">
-					<?php
-						include('./assets/php/connect.php');
-						$max = $conn -> query('select MAX(id) from news') -> fetch_assoc()['MAX(id)'];
-						$min = $conn -> query('select MIN(id) from news') -> fetch_assoc()['MIN(id)'];
-						for ($i=$max; $i > $min - 1; $i--) { 
-							$result = $conn -> query('select * from news where id='.$i);
-							$row = $result -> fetch_assoc();
-					?>
-                    <div class="news__block">
-                        <img src="../assets/img/news/<?php echo $row['img']?>" alt="img">
-                        <div class="news__block__contant">
-                            <div class="news__block__top">
-                                <h3><?php echo $row['title']?></h3>
-                                <p><?php echo $row['description']?></p>
-                            </div>
-                            <div class="news__block__bot">
-                                <span><?php echo $row['date']?></span>
-                                <div class="grey_line"></div>
-                            </div>
-                        </div>
-                    </div>
-					<?php
-						}
-					?>
-                    <button class="show__more">больше</button>
-                </div>
-            </div>
+			<h1>Подайте заявление</h1>
+			<form action="" method="post" class="_container">
+				<div class="FIO">
+					<h2>1. ФИО</h2>
+					<div class="FIO__container">
+						<div class="FIO__block">
+							<label for="name">Имя</label>
+							<input type="text" id="name" name="name" placeholder="Введите имя">
+						</div>
+						<div class="FIO__block">
+							<label for="surname">Фамилия</label>
+							<input type="text" id="surname" name="surname" placeholder="Введите фамилию">
+						</div>
+						<div class="FIO__block">
+							<label for="patronymic">Отчество</label>
+							<input type="text" id="patronymic" name="patronymic" placeholder="Введите отчество">
+						</div>
+					</div>
+				</div>
+				<div class="second__line">
+					<div class="second__line__block">
+						<h2>2. Дата <br> рождения</h2>
+						<input type="date" name="date">
+					</div>
+					<div class="second__line__block">
+						<h2>3. Пол</h2>
+						<input type="text" name="gender" placeholder="как mommy">
+					</div>
+					<div class="second__line__block">
+						<h2>4. Гражданство</h2>
+						<input type="text" name="citizenship" placeholder="как mommy">
+					</div>
+				</div>
+				<div class="photo">
+					<p>Приложите следующие фотографии: фото паспорта (ФИО и данные паспорта, адрес прописки, сведения о предыдущих папортах стр. 19), вашу фотографию 3x4, СНИЛС</p>
+					<div class="files">
+						<div class="input__wrapper">
+							<input name="file" type="file" id="input__file" class="input input__file" multiple>
+							<label for="input__file" class="input__file-button">
+							   <span class="input__file-icon-wrapper"><img class="input__file-icon" src="../../assets/img/file/download.png" alt="Выбрать файл" width="25"></span>
+							   <span class="input__file-button-text">Выберите файл</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<textarea name="comment" id="comment" placeholder="Коммнетарий к заявлнию..."></textarea>
+				<input type="submit" value="ОТПРАВИТЬ ЗАЯВЛЕНИЕ">
+			</form>
         </main>
         <!-- ПОДВАЛ -->
-        <footer>
-            <div class="footer__container _container">
-                <div class="footer__contant">
-                    <div class="footer__src">
-                        <h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
-                        <div class="line"></div>
-                        <div class="footer__src__container">
-                            <div class="footer__row">
-                                <a href="">Бебра</a>
-                                <a href="">Бебра</a>
-                                <a href="">Бебра</a>
-                            </div>
-                            <div class="footer__row">
-                                <a href="">Бебра</a>
-                                <a href="">978D85</a>
-                                <a href="">Бебра</a>
-                            </div>
-                            <div class="footer__row">
-                                <a href="">Бебра</a>
-                                <a href="">Бебра</a>
-                                <a href="">Бебра</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__contacts">
-                        <h3>КОНТАКТЫ</h3>
-                        <div class="line"></div>
-                        <span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
-                        <span>Администрация: pask_e@mail.ru</span>
-                        <span>Вопросы по работе сайта: +7 953 447 30 25 </span> 
-                    </div>
-                </div>
-                <a href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
-            </div>
-            <div class="copyright _container">
-                <div class="copyright__container">
-                    <span>Copyright © 2015-2022 ГАПОУ ПО  Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
-                    <div class="copyright__img">
-                        <a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
-                        <a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <script src="../assets/js/show_more.js"></script>
+		<footer>
+			<div class="footer__container _container">
+				 <div class="footer__contant">
+				 	<div class="footer__src">
+				 		<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
+				 		<div class="line"></div>
+				 		<div class="footer__src__container">
+					 		<div class="footer__row">
+					 			<a href="">Бебра</a>
+					 			<a href="">Бебра</a>
+					 			<a href="">Бебра</a>
+					 		</div>
+					 		<div class="footer__row">
+					 			<a href="">Бебра</a>
+					 			<a href="">978D85</a>
+					 			<a href="">Бебра</a>
+					 		</div>
+					 		<div class="footer__row">
+					 			<a href="">Бебра</a>
+					 			<a href="">Бебра</a>
+					 			<a href="">Бебра</a>
+					 		</div>
+					 	</div>
+				 	</div>
+				 	<div class="footer__contacts">
+				 		<h3>КОНТАКТЫ</h3>
+				 		<div class="line"></div>
+				 		<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
+				 		<span>Администрация: pask_e@mail.ru</span>
+				 		<span>Вопросы по работе сайта: +7 953 447 30 25 </span> 
+				 	</div>
+				 </div>
+				 <a href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
+			</div>
+			<div class="copyright _container">
+				<div class="copyright__container">
+					<span>Copyright © 2015-2022 ГАПОУ ПО  Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
+					<div class="copyright__img">
+						<a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
+						<a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="../../assets/js/input_file.js"></script>
 </body>
 </html>
