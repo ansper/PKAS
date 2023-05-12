@@ -26,6 +26,7 @@ input {
     font-size: 14px;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
+    width: 175px;
 }
 
 input[type='submit'] {
@@ -42,6 +43,10 @@ textarea {
     width: 80%;
     margin: 70px 0;
     height: 150px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
 }
 
 form {
@@ -50,9 +55,17 @@ form {
     align-items: center;
 }
 
+.FIO {
+    width: 100%;
+}
+
+.FIO h2 {
+    text-align: center;
+}
+
 .FIO__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     font-size: 14px;
     line-height: 18px;
@@ -64,19 +77,13 @@ form {
     flex-direction: column;
 }
 
-.FIO__block:not(:last-child) {
-    margin-right: 30px;
-}
-
 .second__line {
+    width: 100%;
     display: flex;
     align-items: end;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     margin: 70px 0;
-}
-
-.second__line__block:not(:last-child) {
-    margin-right: 30px;
 }
 
 .photo {

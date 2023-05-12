@@ -225,9 +225,9 @@ include('./assets/php/connect.php');
 						$lastResult = $conn->query("select * from news where id = $last[$max]");
 						$lastRow = $lastResult->fetch_assoc();
 						?>
-						<img src="../assets/img/news/<?php echo $lastRow['img'] ?>" alt="news">
-						<h3><?php echo $lastRow['title'] ?></h3>
-						<span><?php echo $lastRow['date'] ?></span>
+						<img src="../assets/img/news/<?= $lastRow['img'] ?>" alt="news">
+						<h3><a href="/news/<?= $lastRow['id']?>"><?= $lastRow['title'] ?></a></h3>
+						<span><a href="/news/<?= $lastRow['id']?>"><?= $lastRow['date'] ?></a></span>
 					</div>
 					<div class="other__news">
 						<?php
@@ -238,14 +238,19 @@ include('./assets/php/connect.php');
 							$result = $conn->query("select * from news where id = $i");
 							$row = $result->fetch_assoc();
 						?>
-							<div class="other__news__block">
-								<h3><?php echo $row['title'] ?></h3>
-								<span><?php echo $row['date'] ?></span>
+							<div class="news">
+								<a href="/news/<?= $row['id']?>">
+									<h4><?= $row['title'] ?></h4>
+									<p><?= $row['date'] ?></p>
+									<div class="news-bottom"></div>
+								</a>
 							</div>
 						<?php
 						}
 						?>
-						<a href="/news">все новости</a>
+						<div class="bt">
+							<a href="/news" class="tex">все новости</a>
+						</div>
 					</div>
 				</div>
 			</section>
