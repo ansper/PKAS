@@ -8,16 +8,14 @@
 	align-items: center;
 	justify-content: center;
 }
-.main a {
+.main input[type='submit'] {
 	width: 360px;
 	padding: 17px 0;
 	text-align: center;
 	border: 1px solid #F18104;
+	background: none;
 	font-size: 24px;
 	color: #000;
-}
-.main a:not(:last-child) {
-	margin-bottom: 70px;
 }
 .main input {
 	width: 360px;
@@ -26,6 +24,8 @@
 	border: 1px solid #F18104;
 	font-size: 24px;
 	color: #000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
 }
 .main input:not(:last-child) {
 	margin-bottom: 70px;

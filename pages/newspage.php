@@ -223,12 +223,14 @@
 						<div class="newspage__content2">
 							<?php
 							$max = "MAX(id)";
+							$minus = 4;
 							$last = $conn->query("select $max from news")->fetch_assoc();
-							for ($i = $last[$max]; $i > $last[$max] - 4; $i--) {
+							for ($i = $last[$max]; $i > $last[$max] - $minus; $i--) {
 								if ($i < 1) {
 									break;
 								} else if ($i == $id) {
 									$i--;
+									$minus++;
 								}
 								$result = $conn->query("select * from news where id = $i");
 								$row = $result->fetch_assoc();
@@ -250,9 +252,6 @@
 					</div>
 				</div>
 			</div>
-
-
-
 		</main>
 		<!-- ПОДВАЛ -->
 		<footer>

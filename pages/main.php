@@ -231,10 +231,10 @@ include('./assets/php/connect.php');
 					</div>
 					<div class="other__news">
 						<?php
-						for ($i = $last[$max] - 1; $i > $last[$max] - 4; $i--) {
+						for ($i = $last[$max] - 1; $i > $last[$max] - 5; $i--) {
 							if ($i < 1) {
 								break;
-							}
+							} 
 							$result = $conn->query("select * from news where id = $i");
 							$row = $result->fetch_assoc();
 						?>

@@ -204,19 +204,19 @@
 							$result = $conn -> query('select * from news where id='.$i);
 							$row = $result -> fetch_assoc();
 					?>
-					<a href="/news/<?=$row['id']?>"><div class="news__block">
-                        <img src="../assets/img/news/<?= $row['img']?>" alt="img">
+					<div class="news__block">
+						<a href="/news/<?=$row['id']?>"><img src="../assets/img/news/<?= $row['img']?>" alt="img"></a>
                         <div class="news__block__contant">
                             <div class="news__block__top">
-                                <h3><?= $row['title']?></h3>
-                                <p><?= $row['description']?></p>
+                                <h3><a href="/news/<?=$row['id']?>"><?= $row['title']?></a></h3>
+                                <p><a href="/news/<?=$row['id']?>"><?= $row['description']?></a></p>
                             </div>
                             <div class="news__block__bot">
-                                <span><?= $row['date']?></span>
+                                <span><a href="/news/<?=$row['id']?>"><?= $row['date']?></a></span>
                                 <div class="grey_line"></div>
                             </div>
                         </div>
-                    </div></a>
+                    </div>
 					<?php
 						}
 					?>
