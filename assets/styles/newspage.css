@@ -15,7 +15,6 @@
 	display: flex;
 	--bs-gutter-x: 1.5rem;
 	--bs-gutter-y: 0;
-	justify-content: space-evenly;
 	flex-wrap: wrap;
 	margin-top: calc(var(--bs-gutter-y) * -1);
 	margin-right: calc(var(--bs-gutter-x) * -.5);
@@ -101,7 +100,8 @@ p {
 }
 
 .bt {
-	border: 3px solid orange;
+	border: 2px solid #F18104;
+	border-radius: 4px;
 	padding: 6px 0px;
 	max-width: 130px;
 }
@@ -119,10 +119,6 @@ p {
 
 .tex:hover {
 	color: #F18104;
-}
-
-.bt:hover {
-	border: 3px solid orange;
 }
 
 @media (max-width: 1280px) {

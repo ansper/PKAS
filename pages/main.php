@@ -228,6 +228,7 @@ include('./assets/php/connect.php');
 						<img src="../assets/img/news/<?= $lastRow['img'] ?>" alt="news">
 						<h3><a href="/news/<?= $lastRow['id']?>"><?= $lastRow['title'] ?></a></h3>
 						<span><a href="/news/<?= $lastRow['id']?>"><?= $lastRow['date'] ?></a></span>
+						<div class="news-bottom"></div>
 					</div>
 					<div class="other__news">
 						<?php
@@ -238,7 +239,7 @@ include('./assets/php/connect.php');
 							$result = $conn->query("select * from news where id = $i");
 							$row = $result->fetch_assoc();
 						?>
-							<div class="news">
+							<div class="other__news__container">
 								<a href="/news/<?= $row['id']?>">
 									<h4><?= $row['title'] ?></h4>
 									<p><?= $row['date'] ?></p>

@@ -20,10 +20,6 @@ if(preg_match('/^\/news\/([0-9]+)/', $request, $matches)) {
             require __DIR__ . '/pages/information/info.html';
             break;
     
-        case '/admin':
-            require __DIR__ . '/admin/admin.php';
-            break;
-    
         case '/apply':
             require __DIR__ . '/pages/enrollee/apply.html';
             break;

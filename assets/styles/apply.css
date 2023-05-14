@@ -1,3 +1,8 @@
+._container__apply {
+    max-width: 968px;
+    margin: 0 auto;
+}
+
 h1 {
     font-size: 42px;
     line-height: 53px;
@@ -20,27 +25,32 @@ p {
     max-width: 625px;
 }
 
+label {
+    margin-bottom: 5px;
+}
+
 input {
     background: none;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #D1D1D1;
     border-radius: 4px;
-    width: 175px;
+    width: 280px;
+    height: 26px;
 }
 
 input[type='submit'] {
     background: #F18104;
     border-radius: 4px;
     color: #fff;
-    width: 80%;
+    width: 635px;
     height: 50px;
     margin-bottom: 70px;
 }
 
 textarea {
     resize: none;
-    width: 80%;
+    width: 968px;
     margin: 70px 0;
     height: 150px;
     padding: 10px;
@@ -59,13 +69,9 @@ form {
     width: 100%;
 }
 
-.FIO h2 {
-    text-align: center;
-}
-
 .FIO__container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     font-size: 14px;
     line-height: 18px;
@@ -82,7 +88,7 @@ form {
     display: flex;
     align-items: end;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 70px 0;
 }
 
@@ -90,7 +96,7 @@ form {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /* INPUT FILE */
