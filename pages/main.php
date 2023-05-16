@@ -10,7 +10,6 @@ include('./assets/php/connect.php');
 	<link rel="stylesheet" href="../assets/styles/reset.css">
 	<link rel="stylesheet" href="../assets/styles/style.css">
 	<link rel="stylesheet" href="../assets/styles/main.css">
-
 	<title>ГАПО ПО ПКАС</title>
 </head>
 
@@ -318,7 +317,7 @@ include('./assets/php/connect.php');
 							</div>
 							<div class="footer__row">
 								<a href="">Бебра</a>
-								<a href="">978D85</a>
+								<a href="/login">978D85</a>
 								<a href="">Бебра</a>
 							</div>
 							<div class="footer__row">
@@ -352,8 +351,9 @@ include('./assets/php/connect.php');
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="../assets/js/script.js"></script>
-   <script src="../assets/js/slick.min.js"></script>
+	<script src="../assets/js/script.js"></script>
+	<script src="../assets/js/slick.min.js"></script>
+
 </body>
 
 </html>

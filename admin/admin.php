@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if($_SESSION['login_status']) {
+		
+	} else {
+		header('Location: /');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
