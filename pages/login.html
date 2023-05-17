@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Вход</title>
-	<link rel="stylesheet" type="text/css" href="../assets/styles/login.css">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/styles/login.css">
+	<title>Вход</title>
 </head>
 <body>
 	<div class="foto">
-		<a href="../index.php"><img src="../assets/img/logo.jpg"></a>
+		<a href="/"><img src="../assets/img/logo.jpg"></a>
 	</div>
-	<div class="main">
-		<input type="" name="" placeholder="Введите логин">
-		<input type="" name=""  placeholder="Введите пароль">
-		<a href="">Вход</a>
-
-	</div>
+	<form class="main" action="" method="post">
+		<input type="text" name="login" placeholder="Введите логин">
+		<input type="password" name="password"  placeholder="Введите пароль">
+		<input type="submit" value="Вход">
+	</form>
 </body>
 </html>

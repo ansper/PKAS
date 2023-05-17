@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
-	<link rel="stylesheet" type="text/css" href="../assets/styles/info.css">
-	<title>Информация</title>
+	<link rel="stylesheet" href="../assets/styles/newspage.css">
+
+
+	<title>ГАПО ПО ПКАС</title>
 </head>
+
 <body>
 	<div class="wrapper">
 		<!-- ШАПКА -->
 		<header>
 			<div class="other__header__container _container">
-				<a href=""><img class="header__containerimg" src="../assets/img/logo.jpg" alt=""></a>
+				<a href="/"><img class="header__containerimg" src="../assets/img/logo.jpg" alt="logo"></a>
 				<div class="header__top">
 					<div class="header__burger">
 						<span></span>
@@ -25,13 +28,13 @@
 								<a href="#">Сведения</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Основные сведения</a>
+										<a href="/info">Основные сведения</a>
 									</li>
 									<li>
-										<a href="">Структура и органы управления организации</a>
+										<a href="/administration">Структура и органы управления организации</a>
 									</li>
 									<li>
-										<a href="">Документы </a>
+										<a href="">Документы</a>
 									</li>
 									<li>
 										<a href="">Образование</a>
@@ -46,7 +49,7 @@
 										<a href="">Материально техническое обеспечение</a>
 									</li>
 									<li>
-										<a href="">Стипендии и меры поддержки обучающихся</a>
+										<a href="">Стипендии меры поддержки обучающихся</a>
 									</li>
 									<li>
 										<a href="">Платные образовательные услуги</a>
@@ -60,7 +63,7 @@
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="#">Профессии</a>
+								<a href="">Профессии</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Архитектура</a>
@@ -104,7 +107,7 @@
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="#">Абитуриенту</a>
+								<a href="">Абитуриенту</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Платные образовательные услуги</a>
@@ -142,10 +145,10 @@
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="#">Студенту</a>
+								<a href="">Студенту</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Стипендии и меры поддержки обучающихся</a>
+										<a href="">Стипендии меры поддержки обучающихся</a>
 									</li>
 									<li>
 										<a href="">Дистанционное обучение</a>
@@ -168,7 +171,7 @@
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="#">Трудоустройство</a>
+								<a href="">Трудоустройство</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Cоциальные партнеры</a>
@@ -192,69 +195,106 @@
 							</li>
 						</ul>
 					</nav>
-			    </div>
+				</div>
 			</div>
 		</header>
+		<!-- ШАПКА -->
 		<main>
-			<h2>Сведения об образовательном учреждении</h2>
-			<section class="info _container">
-				<p>Полное наименование образовательной организации: Государственное автономное профессиональное образовательное учреждение Пензенской области "Пензенский колледж архитектуры и строительства"Сокращенное наименование образовательной организации: ГАПОУ ПО ПКАС</p>
-				<br>
-				<p>ГАПОУ ПО ПКАС создано путем реорганизации в форме автономного учреждения (Постановление Правительства Пензенской области от 10 июня 2016 № 297-пП), тип учреждения - профессиональная организация.</p>
-				<br>
-				<p>Телефон: (841-2) 43-44-86<br>Телефон: (841-2) 52-17-84<br>Телефон: (841-2) 52-18-58 <br>e-mail: pask_e@mail.ru</p> 
-				<br>
-				<p>Режим работы: <br>8:00 до 17:00, Пн-Пт</p>
-				<br>
-				<p>Адреса осуществления мест образовательной деятельности: 440000, область Пензенская, город Пенза, Набережная реки Пензы, 3а <br> 440066, область Пензенская, город Пенза, ул. Собинова, д. 7</p>
-				<br>
-				<p>Адрес образовательной организации: <br> Юридический: ул. Собинова, д. 7
-				</p>
-				<div style="position:relative;overflow:hidden;margin-top: 40px;"><a href="https://yandex.ru/maps/49/penza/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Пенза</a><a href="https://yandex.ru/maps/49/penza/house/ulitsa_sobinova_7k2/YE0YfwdmQUcBQFtpfX5zcn5rYQ==/?indoorLevel=1&ll=44.909506%2C53.222961&utm_medium=mapframe&utm_source=maps&z=17.2" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Собинова, 7к2 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=44.909506%2C53.222961&mode=whatshere&whatshere%5Bpoint%5D=44.907237%2C53.223078&whatshere%5Bzoom%5D=17&z=17.2" width="1250" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-				<br>
-				<p>Фактический адрес: Набережная реки Пензы, 3а</p>
-				<br>
-				<div style="position:relative;overflow:hidden; margin-bottom: 150px;"><a href="https://yandex.ru/maps/org/penzenskiy_kolledzh_arkhitektury_i_stroitelstva/1032039577/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Пензенский колледж Архитектуры и Строительства</a><a href="https://yandex.ru/maps/49/penza/category/college/184106236/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Колледж в Пензе</a><iframe src="https://yandex.ru/map-widget/v1/?ll=45.021030%2C53.186458&mode=poi&poi%5Bpoint%5D=45.020319%2C53.186799&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1032039577&z=17.89" width="1250" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-			</section>
+			<div class="newspage">
+				<div class="newspage__container _container">
+					<div class="newspage__row">
+						<div class="newspage__content">
+							<?php
+							include('./assets/php/connect.php');
+							$id = $matches[1];
+
+							$query = $conn->prepare("select * from news where id = ?");
+							$query->bind_param('i', $id);
+							$query->execute();
+							$query->bind_result($id, $title, $content, $time, $files);
+							$query->fetch();
+							$query->close();
+							?>
+
+							<div class="newspage__foto">
+								<img class="newspage__foto" src="../assets/img/news/<?= $files ?>" alt="">
+							</div>
+							<div class="newspage__title"><?= $title ?></div>
+							<div class="newspage__date"><?= $time ?></div>
+							<div class="text"><?= $content ?></div>
+						</div>
+						<div class="newspage__content2">
+							<?php
+							$max = "MAX(id)";
+							$minus = 4;
+							$last = $conn->query("select $max from news")->fetch_assoc();
+							for ($i = $last[$max]; $i > $last[$max] - $minus; $i--) {
+								if ($i < 1) {
+									break;
+								} else if ($i == $id) {
+									$i--;
+									$minus++;
+								}
+								$result = $conn->query("select * from news where id = $i");
+								$row = $result->fetch_assoc();
+							?>
+								<div class="news">
+									<a href="/news/<?= $row['id'] ?>">
+										<h4><?= $row['title'] ?></h4>
+										<p><?= $row['date'] ?></p>
+										<div class="news-bottom"></div>
+									</a>
+								</div>
+							<?php
+							}
+							?>
+							<div class="bt">
+								<a class="tex" href="/news">все новости</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<!-- ПОДВАЛ -->
 		<footer>
 			<div class="footer__container _container">
-				 <div class="footer__contant">
-				 	<div class="footer__src">
-				 		<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
-				 		<div class="line"></div>
-				 		<div class="footer__src__container">
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">978D85</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 	</div>
-				 	</div>
-				 	<div class="footer__contacts">
-				 		<h3>КОНТАКТЫ</h3>
-				 		<div class="line"></div>
-				 		<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
-				 		<span>Администрация: pask_e@mail.ru</span>
-				 		<span>Вопросы по работе сайта: +7 953 447 30 25 </span> 
-				 	</div>
-				 </div>
-				 <a class="footer-logo" href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
+				<div class="footer__contant">
+					<div class="footer__src">
+						<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
+						<div class="line"></div>
+						<div class="footer__src__container">
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+							</div>
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">978D85</a>
+								<a href="">Бебра</a>
+							</div>
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__contacts">
+						<h3>КОНТАКТЫ</h3>
+						<div class="line"></div>
+						<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
+						<span>Администрация: pask_e@mail.ru</span>
+						<span>Вопросы по работе сайта: +7 953 447 30 25 </span>
+					</div>
+				</div>
+				<a class="footer-logo" href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
 			</div>
 			<div class="copyright _container">
 				<div class="copyright__container">
-					<span>Copyright © 2015-2022 ГАПОУ ПО  Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
+					<span>Copyright © 2015-2022 ГАПОУ ПО Пензенский колледж архитектуры и строительства <br> Designed by
+						yfuhzpyjv</span>
 					<div class="copyright__img">
 						<a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
 						<a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
@@ -262,10 +302,12 @@
 				</div>
 			</div>
 		</footer>
+		<!-- ПОДВАЛ -->
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="../assets/js/script.js"></script>
 	<script src="../assets/js/slick.min.js"></script>
 </body>
+
 </html>

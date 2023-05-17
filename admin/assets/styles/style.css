@@ -15,6 +15,8 @@
 	border: 1px solid #F18104;
 	font-size: 24px;
 	color: #000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
 }
 .nav a:active {
 	background: #F18104;
@@ -81,16 +83,4 @@ th {
 	background: none;
 	border: 1px solid black;
 	height: 30px;
-}
-
-.width-50 {
-	max-width: 50px;
-}
-
-.width-100 {
-	max-width: 75px;
-}
-
-.width-150 {
-	max-width: 125px;
 }

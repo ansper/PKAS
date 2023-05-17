@@ -3,21 +3,27 @@ include('./assets/php/connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../assets/styles/reset.css">
 	<link rel="stylesheet" href="../assets/styles/style.css">
 	<link rel="stylesheet" href="../assets/styles/main.css">
+
 	<title>ГАПО ПО ПКАС</title>
 </head>
+
 <body>
 	<div class="wrapper">
 		<!-- ШАПКА -->
 		<header>
 			<div class="header__container">
 				<div class="header__top">
-					<nav>
+					<div class="header__burger">
+						<span></span>
+					</div>
+					<nav class="header__menu">
 						<ul>
 							<li class="drop-item">
 								<a href="#">Сведения</a>
@@ -58,7 +64,7 @@ include('./assets/php/connect.php');
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="">Профессии</a>
+								<a href="#">Профессии</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Архитектура</a>
@@ -102,7 +108,7 @@ include('./assets/php/connect.php');
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="">Абитуриенту</a>
+								<a href="#">Абитуриенту</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Платные образовательные услуги</a>
@@ -140,7 +146,7 @@ include('./assets/php/connect.php');
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="">Студенту</a>
+								<a href="#">Студенту</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Стипендии меры поддержки обучающихся</a>
@@ -166,7 +172,7 @@ include('./assets/php/connect.php');
 								</ul>
 							</li>
 							<li class="drop-item">
-								<a href="">Трудоустройство</a>
+								<a href="#">Трудоустройство</a>
 								<ul class="dropdown">
 									<li>
 										<a href="">Cоциальные партнеры</a>
@@ -190,11 +196,19 @@ include('./assets/php/connect.php');
 							</li>
 						</ul>
 					</nav>
-			    </div>
-			    <div class="header__bottom">
-			    	<h1>ПЕНЗЕНСКИЙ КОЛЛЕДЖ АРХИТЕКТУРЫ И СТРОИТЕЛЬСТВА</h1>
-			    	<img src="../assets/img/header/logo.png" alt="">
-			    </div>	
+				</div>
+				<div class="header__bottom">
+					<h1>ПЕНЗЕНСКИЙ КОЛЛЕДЖ АРХИТЕКТУРЫ И СТРОИТЕЛЬСТВА</h1>
+					<img srcset="../assets/img/header/logo.png 425w,
+									../assets/img/header/logo.png 768w,
+					            ../assets/img/header/logo.png 1024w,
+					            ../assets/img/header/logo.png 1280w,
+					            ../assets/img/header/logo.png 1600w" sizes="(max-width: 425px) 580px,
+									(max-width: 924px)  960px,
+					           (max-width: 1024px) 1048px, 
+					           (max-width: 1280px) 1280px,
+					           (max-width: 1600px) 1480px, 1600px" src="../assets/img/header/logo.png" alt="logo">
+				</div>
 			</div>
 		</header>
 		<!-- ШАПКА -->
@@ -217,82 +231,129 @@ include('./assets/php/connect.php');
 					<div class="last__news">
 						<h2>Недавнее из колледжа</h2>
 						<?php
-							$max = "MAX(id)";
-							$last = $conn -> query("select $max from news") -> fetch_assoc();
-							$lastResult = $conn -> query("select * from news where id = $last[$max]");
-							$lastRow = $lastResult -> fetch_assoc();
+						$max = "MAX(id)";
+						$last = $conn->query("select $max from news")->fetch_assoc();
+						$lastResult = $conn->query("select * from news where id = $last[$max]");
+						$lastRow = $lastResult->fetch_assoc();
 						?>
-						<img src="../assets/img/news/<?php echo $lastRow['img'] ?>" alt="news">
-						<h3><?php echo $lastRow['title'] ?></h3>
-						<span><?php echo $lastRow['date'] ?></span>
+						<img class="newsfotos" src="../assets/img/news/<?= $lastRow['img'] ?>" alt="news">
+						<h3><a href="/news/<?= $lastRow['id'] ?>"><?= $lastRow['title'] ?></a></h3>
+						<span class="date"><a href="/news/<?= $lastRow['id'] ?>"><?= $lastRow['date'] ?></a>
+							<div class="news-bottom"></div>
+						</span>
+
 					</div>
 					<div class="other__news">
 						<?php
-							for($i = $last[$max] - 1; $i > $last[$max] - 4; $i--) {
-								if ($i < 1) {
-									break;
-								}
-								$result = $conn -> query("select * from news where id = $i");
-								$row = $result -> fetch_assoc();
-						?>
-						<div class="other__news__block">
-							<h3><?php echo $row['title'] ?></h3>
-							<span><?php echo $row['date'] ?></span>
-						</div>
-						<?php
+						for ($i = $last[$max] - 1; $i > $last[$max] - 5; $i--) {
+							if ($i < 1) {
+								break;
 							}
+							$result = $conn->query("select * from news where id = $i");
+							$row = $result->fetch_assoc();
 						?>
-						<a href="/news">все новости</a>
+							<div class="other__news__container">
+								<a href="/news/<?= $row['id'] ?>">
+									<h4><?= $row['title'] ?></h4>
+									<p><?= $row['date'] ?></p>
+									<div class="news-bottom"></div>
+								</a>
+							</div>
+						<?php
+						}
+						?>
+						<div class="bt">
+							<a href="/news" class="tex">все новости</a>
+						</div>
 					</div>
 				</div>
 			</section>
 			<!-- НОВОСТИ -->
 			<!-- НАШИ ПРЕПОДАВАТЕЛИ -->
-			<section class="teachers">
-				<div class="teachers__container _container">
-
+			<div id="slickclider">
+				<div class="slidertitle__row">
+					<div class="sidertitle__body">
+						<div class="slidertitle__title">Наши преподаватели</div>
+					</div>
 				</div>
-			</section>
+				<div class="slickclider">
+					<div class="slider">
+						<div class="slider__item">
+							<div class="sliderr__body">
+								<img class="sliderr__img" srcset="../assets/img/slider/Ellipse 5.png 320w" sizes="(max-width: 320px) 100px" src="../assets/img/slider/Ellipse 5.png" alt="">
+								<div class="sliderr__title">Сидорин Александр<br> Сергеевич</div>
+								<div class="sliderr__text">Преподаватель физической<br> культуры</div>
+							</div>
+						</div>
+
+						<div class="slider__item">
+							<div class="sliderr__body">
+								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (1).png" alt="">
+								<div class="sliderr__title">Первушкин Никита<br> Евгеньевич</div>
+								<div class="sliderr__text">Преподаватель информационных<br> технологий</div>
+							</div>
+						</div>
+
+						<div class="slider__item">
+							<div class="sliderr__body">
+								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (2).png" alt="">
+								<div class="sliderr__title">Бычкова Мария<br> Владимировна</div>
+								<div class="sliderr__text">Преподаватель английского<br> языка</div>
+							</div>
+						</div>
+
+						<div class="slider__item">
+							<div class="sliderr__body">
+								<img class="sliderr__img" src="../assets/img/slider/Ellipse 5 (1).png" alt="">
+								<div class="sliderr__title">Первушкин Никита<br> Евгеньевич</div>
+								<div class="sliderr__text">Преподаватель информационных<br> технологий</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
 			<!-- НАШИ ПРЕПОДАВАТЕЛИ -->
 		</main>
 		<!-- ПОДВАЛ -->
 		<footer>
 			<div class="footer__container _container">
-				 <div class="footer__contant">
-				 	<div class="footer__src">
-				 		<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
-				 		<div class="line"></div>
-				 		<div class="footer__src__container">
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">978D85</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 		<div class="footer__row">
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 			<a href="">Бебра</a>
-					 		</div>
-					 	</div>
-				 	</div>
-				 	<div class="footer__contacts">
-				 		<h3>КОНТАКТЫ</h3>
-				 		<div class="line"></div>
-				 		<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
-				 		<span>Администрация: pask_e@mail.ru</span>
-				 		<span>Вопросы по работе сайта: +7 953 447 30 25 </span> 
-				 	</div>
-				 </div>
-				 <a href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
+				<div class="footer__contant">
+					<div class="footer__src">
+						<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
+						<div class="line"></div>
+						<div class="footer__src__container">
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+							</div>
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">978D85</a>
+								<a href="">Бебра</a>
+							</div>
+							<div class="footer__row">
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+								<a href="">Бебра</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__contacts">
+						<h3>КОНТАКТЫ</h3>
+						<div class="line"></div>
+						<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
+						<span>Администрация: pask_e@mail.ru</span>
+						<span>Вопросы по работе сайта: +7 953 447 30 25 </span>
+					</div>
+				</div>
+				<a class="footer-logo" href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
 			</div>
 			<div class="copyright _container">
 				<div class="copyright__container">
-					<span>Copyright © 2015-2022 ГАПОУ ПО  Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
+					<span>Copyright © 2015-2022 ГАПОУ ПО Пензенский колледж архитектуры и строительства <br> Designed by
+						yfuhzpyjv</span>
 					<div class="copyright__img">
 						<a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
 						<a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
@@ -302,5 +363,10 @@ include('./assets/php/connect.php');
 		</footer>
 		<!-- ПОДВАЛ -->
 	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/script.js"></script>
+	<script src="../assets/js/slick.min.js"></script>
 </body>
+
 </html>
