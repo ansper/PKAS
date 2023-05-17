@@ -1,0 +1,42 @@
+.pdf h1 {
+    font-size: 42px;
+    color: #F18104;
+    margin: 30px 0;
+}
+.pdf p{
+	font-size: 24px;
+	line-height: 35px;
+	color: #1C1C1B;
+	font-weight: 600;
+}
+.pdf ul {
+    margin-left: 30px;
+    list-style: disc;
+    font-size: 24px;
+	line-height: 35px;
+	color: #1C1C1B;
+	font-weight: 600;
+}
+.pdf h2 {
+	margin: 20px 0;
+	color: #F18104;
+	font-size: 36px;
+	line-height: 51px;
+}
+.pdf h3 {
+	margin: 20px 0;
+	color: #F18104;
+	font-size: 28px;
+	line-height: 43px;
+}
+.pdf a{
+    font-size: 24px;
+	line-height: 35px;
+	font-weight: 600;
+}
+.pdf a:hover{
+    text-decoration: underline;
+}
+.pdf {
+    margin-bottom: 20px;
+}
