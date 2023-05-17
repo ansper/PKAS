@@ -194,88 +194,79 @@
 							</li>
 						</ul>
 					</nav>
-				</div>
-			</div>
-		</header>
-		<main>
-			<div class="news">
-				<h2>Новости</h2>
-				<div class="news__container _container">
-					<?php
-					include('./assets/php/connect.php');
-					$max = $conn->query('select MAX(id) from news')->fetch_assoc()['MAX(id)'];
-					$min = $conn->query('select MIN(id) from news')->fetch_assoc()['MIN(id)'];
-					for ($i = $max; $i > $min - 1; $i--) {
-						$result = $conn->query('select * from news where id=' . $i);
-						$row = $result->fetch_assoc();
-					?>
-						<div class="news__block">
-							<a href="/news/<?= $row['id'] ?>"><img class="news__fotos" src="../assets/img/news/<?= $row['img'] ?>" alt="img"></a>
-							<div class="news__block__contant">
-								<div class="news__block__top">
-									<h3><a href="/news/<?= $row['id'] ?>"><?= $row['title'] ?></a></h3>
-									<p><a href="/news/<?= $row['id'] ?>"><?= $row['description'] ?></a></p>
-								</div>
-								<div class="news__block__bot">
-									<span><a href="/news/<?= $row['id'] ?>"><?= $row['date'] ?></a></span>
-									<div class="grey_line"></div>
-								</div>
-							</div>
-						</div>
-					<?php
-					}
-					?>
-					<button class="show__more">больше</button>
-				</div>
-			</div>
-		</main>
-		<!-- ПОДВАЛ -->
-		<footer>
-			<div class="footer__container _container">
-				<div class="footer__contant">
-					<div class="footer__src">
-						<h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
-						<div class="line"></div>
-						<div class="footer__src__container">
-							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-							</div>
-							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">978D85</a>
-								<a href="">Бебра</a>
-							</div>
-							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-							</div>
-						</div>
-					</div>
-					<div class="footer__contacts">
-						<h3>КОНТАКТЫ</h3>
-						<div class="line"></div>
-						<span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
-						<span>Администрация: pask_e@mail.ru</span>
-						<span>Вопросы по работе сайта: +7 953 447 30 25 </span>
-					</div>
-				</div>
-				<a class="footer-logo" href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
-			</div>
-			<div class="copyright _container">
-				<div class="copyright__container">
-					<span>Copyright © 2015-2022 ГАПОУ ПО Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
-					<div class="copyright__img">
-						<a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
-						<a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script src="../assets/js/show_more.js"></script>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="news">
+                <h2>Новости</h2>
+                <div class="news__container _container">
+                    <!-- PHP -->
+                    <div class="news__block">
+                        <img src="../assets/img/news/test1.jpg" alt="">
+                        <div class="news__block__contant">
+                            <div class="news__block__top">
+                                <h3>Приняли участие в акции по благоустройству</h3>
+                                <p>27 апреля на базе ДЮСШ №4 состоялось награждение победителей и призеров в личном и командном Первенстве XXXIII Кубка Пензенской области по лыжным гонкам. Среди победителей студентка I курса группы 22ОА27 Дарья Белякова, которая награждена...</p>
+                            </div>
+                            <div class="news__block__bot">
+                                <span>Май 3, 2023</span>
+                                <div class="grey_line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PHP -->
+                    <button class="show__more">больше</button>
+                </div>
+            </div>
+        </main>
+        <!-- ПОДВАЛ -->
+        <footer>
+            <div class="footer__container _container">
+                <div class="footer__contant">
+                    <div class="footer__src">
+                        <h3>ПОЛЕЗНЫЕ ССЫЛКИ</h3>
+                        <div class="line"></div>
+                        <div class="footer__src__container">
+                            <div class="footer__row">
+                                <a href="">Бебра</a>
+                                <a href="">Бебра</a>
+                                <a href="">Бебра</a>
+                            </div>
+                            <div class="footer__row">
+                                <a href="">Бебра</a>
+                                <a href="">978D85</a>
+                                <a href="">Бебра</a>
+                            </div>
+                            <div class="footer__row">
+                                <a href="">Бебра</a>
+                                <a href="">Бебра</a>
+                                <a href="">Бебра</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__contacts">
+                        <h3>КОНТАКТЫ</h3>
+                        <div class="line"></div>
+                        <span>г. Пенза, ул. Набережная р. Пензы, д. 3</span>
+                        <span>Администрация: pask_e@mail.ru</span>
+                        <span>Вопросы по работе сайта: +7 953 447 30 25 </span> 
+                    </div>
+                </div>
+                <a href=""><img src="../assets/img/footer/footer__logo.jpg" alt=""></a>
+            </div>
+            <div class="copyright _container">
+                <div class="copyright__container">
+                    <span>Copyright © 2015-2022 ГАПОУ ПО  Пензенский колледж архитектуры и строительства <br> Designed by yfuhzpyjv</span>
+                    <div class="copyright__img">
+                        <a href=""><img src="../assets/img/footer/vk.png" alt=""></a>
+                        <a href=""><img src="../assets/img/footer/tg.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/js/show_more.js"></script>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
