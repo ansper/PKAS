@@ -19,10 +19,13 @@ include('./assets/php/connect.php');
 		<header>
 			<div class="header__container">
 				<div class="header__top">
+					<div class="header__burger">
+						<span></span>
+					</div>
 					<nav>
 						<ul>
 							<li class="drop-item">
-								<a href="#">Сведения</a>
+								<a href="">Сведения</a>
 								<ul class="dropdown">
 									<li>
 										<a href="/info">Основные сведения</a>
@@ -63,43 +66,43 @@ include('./assets/php/connect.php');
 								<a href="">Профессии</a>
 								<ul class="dropdown">
 									<li>
-										<a href="">Архитектура</a>
+										<a href="#">Архитектура</a>
 									</li>
 									<li>
-										<a href="">Строительство и эксплуатация зданий и сооружений</a>
+										<a href="#">Строительство и эксплуатация зданий и сооружений</a>
 									</li>
 									<li>
-										<a href="">Реклама</a>
+										<a href="#">Реклама</a>
 									</li>
 									<li>
-										<a href="">Садово-парковое и ландшафтное строительство</a>
+										<a href="#">Садово-парковое и ландшафтное строительство</a>
 									</li>
 									<li>
-										<a href="">Прикладная информатика</a>
+										<a href="#">Прикладная информатика</a>
 									</li>
 									<li>
-										<a href="">Информационные системы и программирование</a>
+										<a href="#">Информационные системы и программирование</a>
 									</li>
 									<li>
-										<a href="">Строительство и эксплуатация автомобильных дорог и аэродромов</a>
+										<a href="#">Строительство и эксплуатация автомобильных дорог и аэродромов</a>
 									</li>
 									<li>
-										<a href="">Сварочное производство</a>
+										<a href="#">Сварочное производство</a>
 									</li>
 									<li>
-										<a href="">Управление, эксплуатация и обслуживание многоквартирного дома</a>
+										<a href="#">Управление, эксплуатация и обслуживание многоквартирного дома</a>
 									</li>
 									<li>
-										<a href="">Графический дизайнер</a>
+										<a href="#">Графический дизайнер</a>
 									</li>
 									<li>
-										<a href="">Мастер отделочных строительных и декоративных работ</a>
+										<a href="#">Мастер отделочных строительных и декоративных работ</a>
 									</li>
 									<li>
-										<a href="">Мастер по ремонту и обслуживанию инженерных систем ЖКХ</a>
+										<a href="#">Мастер по ремонту и обслуживанию инженерных систем ЖКХ</a>
 									</li>
 									<li>
-										<a href="">Сварщик (ручной и частично механизированной сварки (наплавки))</a>
+										<a href="#">Сварщик (ручной и частично механизированной сварки (наплавки))</a>
 									</li>
 								</ul>
 							</li>
@@ -181,12 +184,21 @@ include('./assets/php/connect.php');
 									</li>
 								</ul>
 							</li>
+							
 						</ul>
 					</nav>
 				</div>
 				<div class="header__bottom">
 					<h1>ПЕНЗЕНСКИЙ КОЛЛЕДЖ АРХИТЕКТУРЫ И СТРОИТЕЛЬСТВА</h1>
-					<img src="../assets/img/header/logo.png" alt="">
+					<img srcset="../assets/img/header/logo.png 425w,
+									../assets/img/header/logo.png 768w,
+					            ../assets/img/header/logo.png 1024w,
+					            ../assets/img/header/logo.png 1280w,
+					            ../assets/img/header/logo.png 1600w" sizes="(max-width: 425px) 580px,
+									(max-width: 924px)  960px,
+					           (max-width: 1024px) 1048px, 
+					           (max-width: 1280px) 1280px,
+					           (max-width: 1600px) 1480px, 1600px" src="../assets/img/header/logo.png" alt="logo">
 				</div>
 			</div>
 		</header>
@@ -200,7 +212,7 @@ include('./assets/php/connect.php');
 				<div class="video__container _container ">
 					<h2>День открытых дверей</h2>
 					<iframe width="937" height="526" src="https://www.youtube.com/embed/ofbJI4SRhME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<a href="">еще видео</a>
+					<a href="#">еще видео</a>
 				</div>
 			</section>
 			<!-- ДЕНЬ ОТКРЫТЫХ ДВЕРЕЙ -->
@@ -248,12 +260,13 @@ include('./assets/php/connect.php');
 			<!-- НОВОСТИ -->
 			<!-- НАШИ ПРЕПОДАВАТЕЛИ -->
 			<div id="slickclider">
-				<div class="slickclider">
-					<div class="slidertitle__row">
-						<div class="sidertitle__body">
-							<div class="slidertitle__title">Наши преподаватели</div>
-						</div>
+				<div class="slidertitle__row">
+					<div class="sidertitle__body">
+						<div class="slidertitle__title">Наши преподаватели</div>
 					</div>
+				</div>
+				<div class="slickclider">
+
 
 					<div class="slider">
 						<div class="slider__item">

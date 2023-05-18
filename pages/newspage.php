@@ -20,7 +20,7 @@
 				<a href="/"><img class="header__containerimg" src="../assets/img/logo.jpg" alt="logo"></a>
 				<div class="header__top">
 					<nav>
-					<ul>
+						<ul>
 							<li class="drop-item">
 								<a href="#">Сведения</a>
 								<ul class="dropdown">
@@ -253,19 +253,19 @@
 						<div class="line"></div>
 						<div class="footer__src__container">
 							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
+								<a href="/apply">Подать заявление</a>
+								<a href="/info">Основные сведения</a>
+								<a href="/navigator">Направления подготовки</a>
 							</div>
 							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">978D85</a>
-								<a href="">Бебра</a>
+								<a href="/employement">Трудоустройство</a>
+								<a href="/login">Для администраторов</a>
+								<a href="/socialpartn">Социальные партнеры</a>
 							</div>
 							<div class="footer__row">
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
-								<a href="">Бебра</a>
+								<a href="/news">Новости</a>
+								<a href="/support">Поддержка</a>
+								<a href="/administtration">Руководство</a>
 							</div>
 						</div>
 					</div>
