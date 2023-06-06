@@ -10,6 +10,7 @@ include('./assets/php/connect.php');
 	<link rel="stylesheet" href="../assets/styles/reset.css">
 	<link rel="stylesheet" href="../assets/styles/style.css">
 	<link rel="stylesheet" href="../assets/styles/main.css">
+	<link rel="stylesheet" href="../dist/css/bvi.min.css">
 	<title>ГАПО ПО ПКАС</title>
 </head>
 
@@ -184,7 +185,11 @@ include('./assets/php/connect.php');
 									</li>
 								</ul>
 							</li>
-							
+							<li>
+								<a href="#" class="bvi-open">
+									<img src="../assets/img/eyes.png" style="width: 30px; height: 30px;" alt="">
+								</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -357,6 +362,11 @@ include('./assets/php/connect.php');
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="../assets/js/script.js"></script>
 	<script src="../assets/js/slick.min.js"></script>
+
+	<script src="../dist/js/bvi.min.js"></script>
+	<script>
+		new isvek.Bvi();
+	</script>
 
 </body>
 

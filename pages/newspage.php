@@ -7,8 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../assets/styles/reset.css">
 	<link rel="stylesheet" type="text/css" href="../assets/styles/style.css">
 	<link rel="stylesheet" href="../assets/styles/newspage.css">
-
-
+	<link rel="stylesheet" href="../dist/css/bvi.min.css">
 	<title>ГАПО ПО ПКАС</title>
 </head>
 
@@ -181,6 +180,11 @@
 									</li>
 								</ul>
 							</li>
+							<li>
+								<a href="#" class="bvi-open">
+									<img src="../assets/img/eyes.png" style="width: 30px; height: 30px;" alt="">
+								</a>
+							</li>
 						</ul>
 					</nav>
 				</div>
@@ -293,6 +297,10 @@
 		<!-- ПОДВАЛ -->
 	</div>
 
+	<script src="../dist/js/bvi.min.js"></script>
+	<script>
+		new isvek.Bvi();
+	</script>
 
 </body>
 
